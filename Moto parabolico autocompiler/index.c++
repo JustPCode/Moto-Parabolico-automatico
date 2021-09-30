@@ -2,14 +2,15 @@
 using namespace std;
 
 void setup {
+//  declaration
     auto Sx;
     auto Sy;
     auto V;
     int a = 9,81;
     auto t;
+    int z = 0 };
 
-    int z = 0 }
-
+//  data input
 auto inpSx {
     cout << "insert Sx (m) or /" << endl;
     cin >> auto inp1 >> endl;
@@ -32,6 +33,7 @@ auto inpt {
 
 
 int main {
+//  data check
     inpSx ();
     if (inpSx == "/") {
         z++ };
@@ -71,6 +73,7 @@ do {
         exit (abort-to_much_calc.)};
     
 } while (Sx != /, Sy != /, V != /, t != /,);
+//  output
     cout << "La distanza dal punto di partenza (Sx) è di " Sx "m" <<endl;
     cout << "L'altezza (Sy) è di " Sy "m" <<endl;
     cout << "La velocità impiegata (V) è di " V "m/s" <<endl;
