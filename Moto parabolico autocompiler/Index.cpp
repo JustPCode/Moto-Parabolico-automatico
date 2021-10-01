@@ -1,4 +1,4 @@
-#include <IOStream>
+#include <iostream>
 using namespace std;
 
 void setup {
@@ -8,7 +8,7 @@ void setup {
     auto V;
     int a = 9,81;
     auto t;
-    int z = 0 };
+    int z = 0; };
 
 //  data input
 auto inpSx {
@@ -70,7 +70,7 @@ do {
 //  Break the rule!  
     z++;
     if (z > 5) {
-        exit (abort-to_much_calc.)};
+        exit (abort-to_much_calc)};
     
 } while (Sx != /, Sy != /, V != /, t != /,);
 //  output
@@ -80,4 +80,4 @@ do {
     cout << "Il tempo impiegato per toccare terra (t) è di " t "s"  <<endl;
     cout << "L'accellerazione di gravità (g/a) è di " a "m/s" <<endl;
     
-    exit (code success!)};
+    exit (code_success)};
