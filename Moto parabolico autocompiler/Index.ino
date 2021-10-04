@@ -1,4 +1,4 @@
-void setup {
+int setup {
 //  Insert data without their unit of mesure (9,81 instead of 9,81m/s)
     int Sx = ;
     int Sy = ;
@@ -53,4 +53,4 @@ do {
     Serial.print("L'accellerazione di gravità (g, a) è di " a "m/s");
     Serial.print("\n");
 
-    void loop() {}
+void loop() {}
