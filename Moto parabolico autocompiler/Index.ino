@@ -9,23 +9,15 @@ void setup {
 
 int main {
 //  data check
-    if (Sx == " ") {
-        z++ };
-
-    if (Sy == " ") {
-        z++ };
-
-    if (V == " ") {
-        z++ };
-
-    if (t == " ") {
-        z++ };
-
-if (z<2){
-    Serial.print("/!\ Not enough data, please retry /!\ ");
-    Serial.print("\n");
-    exit (abort-not_enough_data);
-    else z = 0 };
+    if (Sx == " ") {z++ };
+    if (Sy == " ") {z++ };
+    if (V == " ") {z++ };
+    if (t == " ") {z++ };
+    if (z<2){
+        Serial.print("/!\ Not enough data, please retry /!\ ");
+        Serial.print("\n");
+        return(abort-not_enough_data);
+    exit {z = 0 };
 
 do {
 //  Formule MRU
