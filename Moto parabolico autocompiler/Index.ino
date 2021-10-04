@@ -1,53 +1,24 @@
-#include <iostream>
-using namespace std;
-
 void setup {
-//  declaration
-    auto Sx;
-    auto Sy;
-    auto V;
+//  Insert data without their unit of mesure (9,81 instead of 9,81m/s)
+    int Sx;
+    int Sy;
+    int V;
     int a = 9,81;
-    auto t;
+    int t;
     int z = 0; };
-
-//  data input
-auto inpSx {
-    cout << "insert Sx (m) or /" << endl;
-    cin >> auto inp1 >> endl;
-    return inp1 };
-
-auto inpSy {
-    cout << "insert Sy (m) or /" << endl;
-    cin >> auto inp2 >> endl;
-    return inp2 };
-
-auto inpV {
-    cout << "insert V (m/s) or /" << endl;
-    cin >> auto inp3 >> endl;
-    return inp3 };
-
-auto inpt {
-    cout << "insert t (s) or /" << endl;
-    cin >> auto inp4 >> endl;
-    return inp4 };
-
 
 int main {
 //  data check
-    inpSx ();
-    if (inpSx == "/") {
-        z++ };
-    
-    inpSy ();
-    if (inpSy == "/") {
+    if (Sx == " ") {
         z++ };
 
-    inpV ();
-    if (inpV == "/") {
+    if (Sy == " ") {
         z++ };
 
-    inpt ();
-    if (inpt == "/") {
+    if (V == " ") {
+        z++ };
+
+    if (t == " ") {
         z++ };
 
 if (z<2){
@@ -81,3 +52,5 @@ do {
     cout << "L'accellerazione di gravità (g/a) è di " a "m/s" <<endl;
     
     exit (code_success)};
+
+    void loop() {}
