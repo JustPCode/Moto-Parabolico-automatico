@@ -1,18 +1,24 @@
-int setup {
-//  Insert data without their unit of mesure (9,81 instead of 9,81m/s)
-    int Sx = ;
-    int Sy = ;
-    int V = ;
-    int a = 9,81;
-    int t = ;
-    int z = 0; };
+void setup() {
+    Serial.begin(9600);
 
-int main {
+//  Replace the 0 with the data without their unit of mesure (9,81 instead of 9,81m/s)
+int Sx = 0;
+int Sy = 0;
+int V = 0;
+int a = 9.81;
+int t = 0;}
+
+
+
+//DON'T TOUCH THIS!!
+    int z = 0;
+
+int check {
 //  data check
-    if (Sx == " ") {z++ };
-    if (Sy == " ") {z++ };
-    if (V == " ") {z++ };
-    if (t == " ") {z++ };
+    if (Sx == " ") {z++ }
+    if (Sy == " ") {z++ }
+    if (V == " ") {z++ }
+    if (t == " ") {z++ }
     if (z<2){
         Serial.print("/!\ Not enough data, please retry /!\ ");
         Serial.print("\n");
@@ -34,23 +40,18 @@ do {
 //  Break the rule!  
     z++;
     if (z > 5) {
-    Serial.print("/!\ Not enough data, please retry /!\ ");
-    Serial.print("\n");
-        exit (abort-to_much_calc)};
+    Serial.print("/!\ Not enough data, please retry /!\ ")
+    Serial.print("\n")
+        exit ()}
     
-} while (Sx != /, Sy != /, V != /, t != /,);
+} while (Sx != /, Sy != /, V != /, t != /,)
 //  output
-    Serial.print("Output:");
-    Serial.print("\n\n");
-    Serial.print("La distanza dal punto di partenza (Sx) è di " Sx "m");
-    Serial.print("\n");
-    Serial.print("L'altezza (Sy) è di " Sy "m");
-    Serial.print("\n");
-    Serial.print("La velocità impiegata (V) è di " V "m/s");
-    Serial.print("\n");
-    Serial.print("Il tempo impiegato per toccare terra (t) è di " t "s");
-    Serial.print("\n");
-    Serial.print("L'accellerazione di gravità (g, a) è di " a "m/s");
-    Serial.print("\n");
+    Serial.print("Output: \n\n")
+    Serial.print("La distanza dal punto di partenza (Sx) è di " Sx "m \n")
+    Serial.print("L'altezza (Sy) è di " Sy "m \n")
+    Serial.print("La velocità impiegata (V) è di " V "m/s \n")
+    Serial.print("Il tempo impiegato per toccare terra (t) è di " t "s \n")
+    Serial.print("L'accellerazione di gravità (g, a) è di " a "m/s \n")
+}
 
 void loop() {}
