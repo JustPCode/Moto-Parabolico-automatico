@@ -2,11 +2,11 @@ void setup() {
     Serial.begin(9600);
 
 //  Replace the 0 with the data without their unit of mesure (9,81 instead of 9,81m/s)
-int Sx = 0;
-int Sy = 0;
-int V = 0;
-int a = 9.81;
-int t = 0;}
+double Sx = 0;
+double Sy = 0;
+double V = 0;
+double a = 9.81;
+double t = 0;}
 
 
 
@@ -29,13 +29,13 @@ do {
 //  Formule MRU
     if (Sx == "/", V != "/", t != "/") {Sx = V*t };
     
-    if (V == "/", Sx != "/", t != "/") {V = };
-    if (t == "/", Sx != "/", V != "/") {t = };
+    if (V == "/", Sx != "/", t != "/") {V = Sx/t};
+    if (t == "/", Sx != "/", V != "/") {t = Sx/V};
      
 //  Formule MUA
     if (Sy == "/", t != "/") {Sy = a/2*t^2};
 
-    if (t == "/", Sy != "/") {t = };
+    if (t == "/", Sy != "/") {t = rad(2*Sy/a)};
 
 //  Break the rule!  
     z++;
