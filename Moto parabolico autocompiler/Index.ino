@@ -2,19 +2,17 @@ void setup() {
     Serial.begin(9600);
 
 //  Replace the 0 with the data without their unit of mesure (9,81 instead of 9,81m/s)
-double Sx = 0;
-double Sy = 0;
-double V = 0;
-double a = 9.81;
-double t = 0;}
-
-
+    float Sx = 0;
+    float Sy = 0;
+    float V = 0;
+    float a = 9.81;
+    float t = 0;
 
 //DON'T TOUCH THIS!!
-    int z = 0;
+    int z = 0;}
 
 int check {
-//  data check
+//data check
     if (Sx == " ") {z++ }
     if (Sy == " ") {z++ }
     if (V == " ") {z++ }
@@ -26,26 +24,23 @@ int check {
     exit {z = 0 };
 
 do {
-//  Formule MRU
-    if (Sx == "/", V != "/", t != "/") {Sx = V*t };
-    
+//Formule MRU
+    if (Sx == "/", V != "/", t != "/") {Sx = V*t };  
     if (V == "/", Sx != "/", t != "/") {V = Sx/t};
     if (t == "/", Sx != "/", V != "/") {t = Sx/V};
      
-//  Formule MUA
+//Formule MUA
     if (Sy == "/", t != "/") {Sy = a/2*t^2};
-
     if (t == "/", Sy != "/") {t = rad(2*Sy/a)};
 
-//  Break the rule!  
+//Break the rule!  
     z++;
     if (z > 5) {
     Serial.print("/!\ Not enough data, please retry /!\ ")
     Serial.print("\n")
         exit ()}
-    
 } while (Sx != /, Sy != /, V != /, t != /,)
-//  output
+//Output
     Serial.print("Output: \n\n")
     Serial.print("La distanza dal punto di partenza (Sx) è di " Sx "m \n")
     Serial.print("L'altezza (Sy) è di " Sy "m \n")
