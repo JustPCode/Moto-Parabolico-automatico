@@ -18,26 +18,24 @@ int check {
     if (V == " ") {z++ }
     if (t == " ") {z++ }
     if (z<2){
-        Serial.print("/!\ Not enough data, please retry /!\ ");
-        Serial.print("\n");
-        return(abort-not_enough_data);
+        Serial.print("/!\ Data error, please retry /!\ \n")
+        exit ();
     exit {z = 0 };
 
 do {
 //Formule MRU
-    if (Sx == "/", V != "/", t != "/") {Sx = V*t };  
-    if (V == "/", Sx != "/", t != "/") {V = Sx/t};
-    if (t == "/", Sx != "/", V != "/") {t = Sx/V};
+    if (Sx == "/", V != "/", t != "/") {Sx = V*t}  
+    if (V == "/", Sx != "/", t != "/") {V = Sx/t}
+    if (t == "/", Sx != "/", V != "/") {t = Sx/V}
      
 //Formule MUA
-    if (Sy == "/", t != "/") {Sy = a/2*t^2};
-    if (t == "/", Sy != "/") {t = rad(2*Sy/a)};
+    if (Sy == "/", t != "/") {Sy = a/2*t^2}
+    if (t == "/", Sy != "/") {t = rad(2*Sy/a)}
 
 //Break the rule!  
     z++;
     if (z > 5) {
-    Serial.print("/!\ Not enough data, please retry /!\ ")
-    Serial.print("\n")
+    Serial.print("/!\ I need a brake, please retry /!\ \n");
         exit ()}
 } while (Sx != /, Sy != /, V != /, t != /,)
 //Output
