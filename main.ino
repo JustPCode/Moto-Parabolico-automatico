@@ -3,18 +3,18 @@ void setup() {
 
 //  Replace the 0 with the data without their
 //  unit of mesure (9.81 instead of 9,81m/s)
-    auto Sx = "/";
-    auto Sy = "/";
-    auto V = "/";
-    auto g = 9.81;
-    auto t = "/";
+    char Sx = '/';
+    char Sy = '/';
+    char V = '/';
+    char g = 9.81;
+    char t = '/';
 
 //data check
     int z = 0;
-    if (Sx == "/") {z++; }
-    if (Sy == "/") {z++; }
-    if (V == "/") {z++; }
-    if (t == "/") {z++; }
+    if (isAscii(Sx)) {z++; }
+    if (isAscii(Sy)) {z++; }
+    if (isAscii(V)) {z++; }
+    if (isAscii(t)) {z++; }
     if (z<2){
         Serial.print("/!\ Data error, please retry /!\ \n");
         return; }    
@@ -23,13 +23,13 @@ void setup() {
     z = 0;
     do {
 //Formule MRU
-    if (Sx == "/", V != "/", t != "/") {Sx = V * t; }  
-    if (V == "/", Sx != "/", t != "/") {V = Sx / t; }
-    if (t == "/", Sx != "/", V != "/") {t = Sx / V; }
+    if (isAscii(Sx) && isDigit(V) && isDigit(t)) {Sx = V * t; }  
+    if (isAscii(V) && isDigit(Sx) && isDigit(t)) {V = Sx / t; }
+    if (isAscii(t) && isDigit(Sx) && isDigit(V)) {t = Sx / V; }
      
 //Formule MUA
-    if (Sy == "/", t != "/") {Sy = g / 2 * t^2; }
-    if (t == "/", Sy != "/") {t = (2 * Sy / g)^1/2; }
+    if (isAscii(Sy) && isDigit(t)) {Sy = g / 2 * t^2; }
+    if (isAscii(t) && isDigit(Sy)) {t = (2 * Sy / g)^1/2; }
 
 //Break the rule!  
     z++;
@@ -37,7 +37,7 @@ void setup() {
     Serial.print("/!\ I need a brake, please retry /!\ \n");
         return; }
 
-} while (Sx == "/" || Sy == "/" || V != "/" || t != "/"); }
+} while (isAscii(Sx) || isAscii(Sy) || isAscii(V) || isAscii(t)); }
 
 //Output
     Serial.print("OUTPUT: \n");
