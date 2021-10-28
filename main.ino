@@ -1,5 +1,13 @@
+#include "Adafruit_GFX.h"
+#include "MCUFRIEND_kbv.h"
+
 void setup() {
     Serial.begin(9600);
+
+    
+    MCUFRIEND_kbv tft(A3, A2, A1, A0, A4); 
+    uint16_t ID = tft.readID(); 
+    tft.begin(ID);
 
 //  Replace the 0 with the data without their
 //  unit of mesure (9.81 instead of 9,81m/s)
@@ -41,10 +49,20 @@ void setup() {
 
 //Output
     Serial.print("OUTPUT: \n");
-    Serial.print("Sx = ") (Sx) (" m \n");
-    Serial.print("Sy = ") (Sy) (" m \n");
-    Serial.print("V = ") (V) (" m/s \n");
-    Serial.print("t = ") (t) (" s \n");
-    Serial.print("g = ") (g) (" m/s \n"); }
+    Serial.print("Sx = ");
+    Serial.print(Sx);
+    Serial.print(" m \n");
+    Serial.print("Sy = ");
+    Serial.print(Sy);
+    Serial.print(" m \n");
+    Serial.print("V = ");
+    Serial.print(V);
+    Serial.print(" m/s \n");
+    Serial.print("t = ");
+    Serial.print(t);
+    Serial.print(" s \n");
+    Serial.print("g = ");
+    Serial.print(g);
+    Serial.print(" m/s \n"); }
 
 void loop() {}
