@@ -1,13 +1,12 @@
-#include "Adafruit_GFX.h"
-#include "MCUFRIEND_kbv.h"
+/*  #include "Adafruit_GFX.h"
+    #include "MCUFRIEND_kbv.h" */
 
 void setup() {
     Serial.begin(9600);
 
-    
-    MCUFRIEND_kbv tft(A3, A2, A1, A0, A4); 
+/*  MCUFRIEND_kbv tft(A3, A2, A1, A0, A4); 
     uint16_t ID = tft.readID(); 
-    tft.begin(ID);
+    tft.begin(ID); */
 
 //  Replace the 0 with the data without their
 //  unit of mesure (9.81 instead of 9,81m/s)
