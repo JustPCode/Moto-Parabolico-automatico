@@ -1,83 +1,65 @@
 #include <iostream>
 using namespace std;
 
-void setup {
-//  declaration
-    auto Sx;
-    auto Sy;
-    auto V;
-    int a = 9,81;
-    auto t;
-    int z = 0; };
+int main() {
+//Dichiarazione
+auto Sx;
+auto Sy;
+auto V;
+auto g = 9.81;
+auto t;
 
-//  data input
-auto inpSx {
-    cout << "insert Sx (m) or /" << endl;
-    cin >> auto inp1 >> endl;
-    return inp1 };
+//Input Valori
+cout << "Input Sx, if none input /" <<endl;
+cin >> Sx;
 
-auto inpSy {
-    cout << "insert Sy (m) or /" << endl;
-    cin >> auto inp2 >> endl;
-    return inp2 };
+cout << "Input Sy, if none input /" <<endl;
+cin >> Sy;
 
-auto inpV {
-    cout << "insert V (m/s) or /" << endl;
-    cin >> auto inp3 >> endl;
-    return inp3 };
+cout << "Input V, if none input /" << endl;
+cin >> V;
 
-auto inpt {
-    cout << "insert t (s) or /" << endl;
-    cin >> auto inp4 >> endl;
-    return inp4 };
+cout << "Input g, if none input /" << endl;
+cin >> g;
 
+cout << "Input t, if none input /" << endl;
+cin >> t;
 
-int main {
-//  data check
-    inpSx ();
-    if (inpSx == "/") {
-        z++ };
+//Data check!
+int z = 0;
+
+    if (Sx == "/") {z++; };
+    if (Sy == "/") {z++; };
+    if (V == "/") {z++; };
+    if (g == "/") {z++; };
+    if (t == "/") {z++; };
     
-    inpSy ();
-    if (inpSy == "/") {
-        z++ };
-
-    inpV ();
-    if (inpV == "/") {
-        z++ };
-
-    inpt ();
-    if (inpt == "/") {
-        z++ };
-
 if (z<2){
-    cout << "Not enough data, please retry." << endl;
-    exit (abort-not_enough_data);
-    else z = 0 };
-
-do {
-//  Formule MRU
-    if (Sx == "/", V != "/", t != "/") {Sx = V*t };
+    cout << "Not enough data, please retry." << endl;}
     
-    if (V == "/", Sx != "/", t != "/") {V = };
-    if (t == "/", Sx != "/", V != "/") {t = };
+else {z = 0; }
+
+//Formule MRU
+do {
+    if (Sx == "/", V != "/", t != "/") {Sx = V * t; }  
+    if (V == "/", Sx != "/", t != "/") {V = Sx / t; }
+    if (t == "/", Sx != "/", V != "/") {t = Sx / V; }
      
-//  Formule MUA
-    if (Sy == "/", t != "/") {Sy = a/2*t^2};
+//Formule MUA
+    if (Sy == "/", t != "/", g != "/") {Sy = g / 2 * t^2; }
+    if (t == "/", Sy != "/", g != "/") {t = (2 * Sy / g)^1/2; }
+//  if (g == "/", Sy != "/", t != "/") {g = ; }
 
-    if (t == "/", Sy != "/") {t = };
-
-//  Break the rule!  
+//Break the rule!  
     z++;
     if (z > 5) {
-        exit (abort-to_much_calc)};
-    
-} while (Sx != /, Sy != /, V != /, t != /,);
-//  output
-    cout << "La distanza dal punto di partenza (Sx) è di " Sx "m" <<endl;
-    cout << "L'altezza (Sy) è di " Sy "m" <<endl;
-    cout << "La velocità impiegata (V) è di " V "m/s" <<endl;
-    cout << "Il tempo impiegato per toccare terra (t) è di " t "s"  <<endl;
-    cout << "L'accellerazione di gravità (g/a) è di " a "m/s" <<endl;
-    
-    exit (code_success)};
+        cout << "I need a brake, please retry" << endl;}
+
+} while (Sx == "/"; Sy == "/"; V == "/"; t == "/"};
+//Output
+    cout << "OUTPUT:" << std::endl;
+    cout << "Sx = " << Sx << "m" << endl;
+    cout << "Sy = " << Sy << "m" << endl;
+    cout << "V = "  << V  << "m/s" << endl;
+    cout << "t = "  << t  << "s" << endl;
+    cout << "g = "  << g  << "m/s" << endl;
