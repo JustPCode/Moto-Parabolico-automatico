@@ -3,11 +3,7 @@ using namespace std;
 
 int main() {
 //Dichiarazione
-auto Sx;
-auto Sy;
-auto V;
-auto g = 9.81;
-auto t;
+auto Sx, Sy, V, g = 9.81, t;
 
 //Input Valori
 cout << "Input Sx, if none input /" <<endl;
