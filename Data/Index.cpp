@@ -6,10 +6,10 @@ int main() {
 int Sx, Sy, V, g = 9.81, t;
 
 //Input Valori
-cout << "Input Sx, if none input /" <<endl;
+cout << "Input Sx, if none input /" << endl;
 cin >> Sx;
 
-cout << "Input Sy, if none input /" <<endl;
+cout << "Input Sy, if none input /" << endl;
 cin >> Sy;
 
 std::cout << "Input V, if none input /" << endl;
@@ -53,9 +53,9 @@ do {
 
 } while (Sx == "/", Sy == "/", V == "/", t == "/");};
 //Output
-    std::cout << "OUTPUT:" << std::endl;
-    std::cout << "Sx = " << Sx << "m" << endl;
-    std::cout << "Sy = " << Sy << "m" << endl;
-    std::cout << "V = "  << V  << "m/s" << endl;
-    std::cout << "t = "  << t  << "s" << endl;
-    std::cout << "g = "  << g  << "m/s" << endl;
+    cout << "OUTPUT:" << std::endl;
+    cout << "Sx = " << Sx << "m"   << endl;
+    cout << "Sy = " << Sy << "m"   << endl;
+    cout << "V = "  << V  << "m/s" << endl;
+    cout << "t = "  << t  << "s"   << endl;
+    cout << "g = "  << g  << "m/s" << endl;
