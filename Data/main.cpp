@@ -43,59 +43,68 @@ double inpt()
 }
 
 // main program
-int main () {double Sx = 0.0, Sy = 0.0, V = 0.0, g = 9.81, t = 0.0;
+int main()
+{
+    double Sx = 0.0, Sy = 0.0, V = 0.0, g = 9.81, t = 0.0;
     cout << "=== Programma avviato per Moto parabolico ===" << endl;
 
     // input valori
     Sx = inpSx();
     Sy = inpSy();
-     V = inpV ();
-     g = inpg ();
-     t = inpt ();
+    V = inpV();
+    g = inpg();
+    t = inpt();
 
-// confirmation
-    cout << "This are the value" << endl;
+    // confirmation
+    system("clear");
+    cout << "=== Programma avviato per Moto parabolico ===" << endl;
+    cout << "=== This are the value inputted           ===" << endl;
     cout << "Sx = " << Sx << endl;
     cout << " g = " << g << endl;
     cout << "Sy = " << Sy << endl;
     cout << " t = " << t << endl;
     cout << " V = " << V << endl;
 
-// Formule MRU
-do {
+    // Formule
+    for (int x = 0; x < 5; x++)
+    {
+        // Formule MRU
+        if (Sx == 0)
+        {
+            Sx = V * t;
+        }
+        if (V == 0)
+        {
+            V = Sx / t;
+        }
+        if (t == 0)
+        {
+            t = Sx / V;
+        }
 
-
-
-
-x++;
-} while (x < 5);
-
+        // Formule MRUA
+        if (Sy == 0)
+        {
+            Sy = g / 2 * t ^ 2;
+        }
+        if (t == 0)
+        {
+            t = (2 * Sy / g) ^ 1 / 2;
+        }
+        //  if (g == 0) {g = ;}
+    }
+    cout << "=== This are the result            ===" << endl;
+    cout << "Sx = " << Sx << endl;
+    cout << " g = " << g << endl;
+    cout << "Sy = " << Sy << endl;
+    cout << " t = " << t << endl;
+    cout << " V = " << V << endl;
     return 1;
 }
 
-
-
-//Formule MRU
-do {
-    if (Sx == "/", V != "/", t != "/") {Sx = V * t; }  
-    if (V == "/", Sx != "/", t != "/") {V = Sx / t; }
-    if (t == "/", Sx != "/", V != "/") {t = Sx / V; }
-     
-//Formule MUA
-    if (Sy == "/", t != "/", g != "/") {Sy = g / 2 * t^2; }
-    if (t == "/", Sy != "/", g != "/") {t = (2 * Sy / g)^1/2; }
-//  if (g == "/", Sy != "/", t != "/") {g = ; }
-
-//Break the rule!  
-    z++;
-    if (z > 5) {
-        cout << "I need a brake, please retry" << endl;}
-
-} while (Sx == "/", Sy == "/", V == "/", t == "/");};
-//Output
-    cout << "OUTPUT:" << endl;
-    cout << "Sx = " << Sx << "m"   << endl;
-    cout << "Sy = " << Sy << "m"   << endl;
-    cout << "V = "  << V  << "m/s" << endl;
-    cout << "t = "  << t  << "s"   << endl;
-    cout << "g = "  << g  << "m/s" << endl;
+cout << "OUTPUT:" << endl;
+cout << "Sx = " << Sx << "m" << endl;
+cout << "Sy = " << Sy << "m" << endl;
+cout << "V = " << V << "m/s" << endl;
+cout << "t = " << t << "s" << endl;
+cout << "g = " << g << "m/s" << endl;
