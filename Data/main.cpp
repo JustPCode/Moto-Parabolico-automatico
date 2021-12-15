@@ -75,6 +75,7 @@ int main()
         }
         if (V == 0)
         {
+            
             V = Sx / t;
         }
         if (t == 0)
