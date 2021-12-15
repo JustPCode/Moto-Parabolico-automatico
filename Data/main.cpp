@@ -8,8 +8,9 @@ using namespace std;
 double inpSx()
 {
     double Sx = 0.0;
-    cout << " Input Sx (m), if none enter 0" << endl;
-    cout << "> Sx = "; cin >> Sx;
+    cout << " Inserisci Sx (m), se manca inserisci 0" << endl;
+    cout << "> Sx = ";
+    cin >> Sx;
     cout << endl;
     return Sx;
 }
@@ -17,17 +18,19 @@ double inpSx()
 double inpSy()
 {
     double Sy = 0.0;
-    cout << " Input Sy (m), if none enter 0" << endl;
-    cout << "> Sy = "; cin >> Sy;
-    cout << endl;    
+    cout << " Inserisci Sy (m), se manca inserisci 0" << endl;
+    cout << "> Sy = ";
+    cin >> Sy;
+    cout << endl;
     return Sy;
 }
 
 double inpV()
 {
     double V = 0.0;
-    cout << " Input V (m/s), if none enter 0" << endl;
-    cout << ">  V = "; cin >> V;
+    cout << " Inserisci V (m/s), se manca inserisci 0" << endl;
+    cout << ">  V = ";
+    cin >> V;
     cout << endl;
     return V;
 }
@@ -35,8 +38,9 @@ double inpV()
 double inpg()
 {
     double g = 9.81;
-    cout << " Input g (m/s), if none enter 0" << endl;
-    cout << ">  g = "; cin >> g;
+    cout << " Inserisci g (m/s), se mancante inserire 0 (default: 9.81)" << endl;
+    cout << ">  g = ";
+    cin >> g;
     cout << endl;
     return g;
 }
@@ -44,8 +48,9 @@ double inpg()
 double inpt()
 {
     double t = 0.0;
-    cout << " Input t (s), if none enter 0" << endl;
-    cout << ">  t = "; cin >> t;
+    cout << " Inserisci t (s), se manca inserisci 0" << endl;
+    cout << ">  t = ";
+    cin >> t;
     cout << endl;
     return t;
 }
@@ -67,13 +72,12 @@ int main()
     // confirmation
     system("CLS");
     cout << "=== Programma avviato per Moto parabolico ===" << endl;
-    cout << " This are the value inputted" << endl;
+    cout << " Valori inseriti" << endl;
     cout << "> Sx = " << Sx << endl;
     cout << "> Sy = " << Sy << endl;
     cout << ">  V = " << V << endl;
     cout << ">  g = " << g << endl;
     cout << ">  t = " << t << endl;
-    
 
     // Formule
     for (int x = 0; x < 5; x++)
@@ -86,7 +90,7 @@ int main()
 
         if (V == 0)
         {
-            
+
             V = Sx / t;
         }
 
@@ -94,7 +98,7 @@ int main()
         {
             t = Sx / V;
         }
-        
+
         // Formule MRUA
         if (Sy == 0)
         {
@@ -106,16 +110,19 @@ int main()
             t = sqrt(2 * Sy / g);
         }
 
-        //  if (g == 0) {g = ;}
+        if (g == 0)
+        {
+            g = 9.81;
+        }
     }
-    
+
     cout << endl;
-    cout << " This are the final result" << endl;
-    cout << "  Sx = " << Sx << " m" << endl;
-    cout << "  Sy = " << Sy << " m" << endl;
-    cout << "   V = " << V << " m/s" << endl;
-    cout << "   t = " << t << " s" << endl;
-    cout << "   g = " << g << " m/s" << endl;
+    cout << " Risultati" << endl;
+    cout << ">  Sx = " << Sx << " m" << endl;
+    cout << ">  Sy = " << Sy << " m" << endl;
+    cout << ">   V = " << V << " m/s" << endl;
+    cout << ">   g = " << g << " m/s" << endl;
+    cout << ">   t = " << t << " s" << endl;
     cout << endl;
     cout << endl;
 
