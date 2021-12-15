@@ -7,7 +7,7 @@ In parole povere si inserisce nel programma i dati nella sezione apposita e si a
 * [Arduino](https://github.com/JustPlay-Code/Moto-parabolico/tree/Arduino)
 
 ##  Progresso
-- [ ] Inserimento valori per utente
-- [ ] Data check
-- [ ] Operation
-- [ ] ConsoleOutput
+- [X] Inserimento valori per utente
+- [X] Data check
+- [X] Operation
+- [X] ConsoleOutput
