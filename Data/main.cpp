@@ -126,5 +126,7 @@ int main()
     cout << endl;
     cout << endl;
 
+    int useless;
+    cin >> useless;
     return 1;
 }
